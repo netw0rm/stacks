@@ -56,7 +56,6 @@ services:
         condition: on-failure
       placement:
         constraints: [node.role != manager]
-
   worker:
     image: dockersamples/examplevotingapp_worker
     networks:
@@ -73,7 +72,6 @@ services:
         window: 120s
       placement:
         constraints: [node.role != manager]
-
   visualizer:
     image: dockersamples/visualizer:stable
     ports:
